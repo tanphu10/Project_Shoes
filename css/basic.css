@@ -54,6 +54,7 @@ header .navbar .navbar-brand img {
 header .collapse {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 header .collapse .navbar-nav .nav-link {
   position: relative;
@@ -76,10 +77,10 @@ header .collapse .navbar-nav .nav-link:active::after {
 }
 header .collapse .navbar-nav .nav-link:hover::after {
   width: 100%;
-  color: red !important;
+  color: rgb(177, 17, 17) !important;
 }
 header .collapse .navbar-nav .active {
-  color: red !important;
+  color: rgb(177, 17, 17) !important;
 }
 header .collapse .account_item a {
   margin-right: 16px;
@@ -100,32 +101,128 @@ header .collapse .account_search .navbar-nav .form-control {
   padding: 15px;
 }
 
+.banner {
+  background-image: url(./../img2/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: center;
+  padding: 30px 20px 50px;
+}
+.banner .banner_title {
+  margin-bottom: 15px;
+}
+.banner .banner_title a {
+  text-align: left;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  transition: all 0.3s;
+}
+.banner .banner_title a:hover {
+  text-decoration: underline;
+}
+.banner h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+}
+
+.product {
+  margin: 20px;
+}
+.product .product_content .row .product_item {
+  padding: 7px;
+  position: relative;
+}
+.product .product_content .row .product_item .product_img {
+  position: relative;
+}
+.product .product_content .row .product_item .product_img .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product .product_content .row .product_item:hover .img-top {
+  display: inline;
+}
+.product .product_content .row .product_item .product_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.product .product_content .row .product_item .product_overlay .overlay_content {
+  transform: translateY(300px) scale(1.5);
+  transition: all 0.5s;
+  padding-left: 30px;
+  text-align: left;
+}
+.product .product_content .row .product_item .product_overlay .overlay_content button {
+  border-radius: 0;
+}
+.product .product_content .row .product_item:hover .product_overlay {
+  opacity: 1;
+}
+.product .product_content .row .product_item:hover .overlay_content {
+  transform: translateY(295px);
+}
+.product .product_content .row .product_item .item_title p {
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+  margin: 5px 0 5px;
+}
+.product .product_content .row .product_item .item_title h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+.product .product_content .row .product_item .item_title span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00c3d7;
+}
+.product .product_content .row .product_item .item_title .form-check {
+  margin-right: 0;
+}
+.product .product_content .row .product_item .item_title .form-check .form-check-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+}
+
 footer {
   margin-top: 20px;
 }
-footer .footer_top .col-3 {
+footer .footer_top .top {
   border: 1px solid #e0e0e0;
   padding: 35px;
   text-align: center;
 }
-footer .footer_top .col-3 h4 {
+footer .footer_top .top h4 {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-footer .footer_top .col-3 a {
+footer .footer_top .top a {
   text-decoration: none;
   transition: all 0.5s;
   color: black;
 }
-footer .footer_top .col-3 a i {
+footer .footer_top .top a i {
   margin: 20px 5px;
   font-size: 18px;
 }
-footer .footer_top .col-3 a:hover {
+footer .footer_top .top a:hover {
   color: rgb(177, 17, 17);
 }
-footer .footer_top .col-3 p {
+footer .footer_top .top p {
   font-size: 13px;
   font-weight: 300;
   color: black;
@@ -133,10 +230,11 @@ footer .footer_top .col-3 p {
 footer .footer_middle {
   margin: 20px 0;
 }
-footer .footer_middle .col-3 {
+footer .footer_middle .middle {
+  margin-bottom: 20px;
   text-align: left;
 }
-footer .footer_middle .col-3 a {
+footer .footer_middle .middle a {
   transition: all 0.5s;
   text-decoration: none;
   color: black;
@@ -144,34 +242,34 @@ footer .footer_middle .col-3 a {
   font-weight: 400;
   color: black;
 }
-footer .footer_middle .col-3 a:hover {
+footer .footer_middle .middle a:hover {
   color: rgb(177, 17, 17);
   text-decoration: underline;
 }
-footer .footer_middle .col-3 h5 {
+footer .footer_middle .middle h5 {
   font-size: 16px;
   font-weight: 500;
   color: black;
 }
-footer .footer_middle .col-3 p {
+footer .footer_middle .middle p {
   font-size: 13px;
   font-weight: 300;
   color: black;
 }
-footer .footer_middle .col-3 .content_item {
+footer .footer_middle .middle .content_item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-footer .footer_middle .col-3 .content_item .item {
+footer .footer_middle .middle .content_item .item {
   padding: 5px 5px;
   border: 1px solid #e0e0e0;
   transition: all 0.6s;
   text-align: center;
 }
-footer .footer_middle .col-3 .content_item .item:hover {
+footer .footer_middle .middle .content_item .item:hover {
   background-color: black;
 }
-footer .footer_middle .col-3 .content_item .item:hover a i {
+footer .footer_middle .middle .content_item .item:hover a i {
   color: #ffffff;
 }
 footer .footer_middle .input-group .form-control {
@@ -179,6 +277,7 @@ footer .footer_middle .input-group .form-control {
 }
 footer .footer_middle .input-group button {
   border-radius: 0;
+  padding: 0 20px;
 }
 footer .footer_bottom {
   background-color: black;

@@ -1,306 +1,367 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  width: 100%;
+}
+// color
+$color-primary: #2a72dc;
+$color-secondary: #1d355e;
+$color-white: #ffffff;
+$color-red: rgb(177, 17, 17);
+$color-black: black;
+$color-lowpink: #f0f0f0;
+$color-cooler: #d8c6b4;
+$color-header: #f4f4f4;
+$color-footer: rgb(255 255 255 / 50%);
+$color-ten: #00c3d7;
+// font-weight
+$fw-thin: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// font-size
+$fs-1: 16px;
+$fs-2: 18px;
+$fs-3: 25px;
+$fs-4: 40px;
+$fs-5: 60px;
+
+// spacing
+$spacer: 1rem;
+
+@mixin styleText($fs: 18px, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin styleButton(
+  $padding,
+  $bg-color,
+  $border,
+  $color,
+  $color-hover,
+  $border-hover,
+  $bg-color-hover
+) {
+  padding: $padding;
+  background-color: $bg-color;
+  border: $border;
+  color: $color;
+  transition: all 0.5s;
+  border-radius: 0px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-hover;
+    border: $border-hover;
+    background-color: $bg-color-hover;
   }
-  img {
-    width: 100%;
-  }
-  // color
-  $color-primary: #2a72dc;
-  $color-secondary: #1d355e;
-  $color-white: #ffffff;
-  $color-red: rgb(177, 17, 17);
-  $color-black: black;
-  $color-lowpink: #f0f0f0;
-  $color-cooler: #d8c6b4;
-  $color-header: #f4f4f4;
-  $color-footer: rgb(255 255 255 / 50%);
-  
-  // font-weight
-  $fw-thin: 300;
-  $fw-normal: 400;
-  $fw-medium: 500;
-  $fw-semibold: 600;
-  $fw-bold: 700;
-  
-  // font-size
-  $fs-1: 16px;
-  $fs-2: 18px;
-  $fs-3: 25px;
-  $fs-4: 40px;
-  $fs-5: 60px;
-  
-  // spacing
-  $spacer: 1rem;
-  
-  @mixin styleText($fs: 18px, $fw, $color) {
-    font-size: $fs;
-    font-weight: $fw;
-    color: $color;
-  }
-  
-  @mixin styleButton(
-    $padding,
-    $bg-color,
-    $border,
-    $color,
-    $color-hover,
-    $border-hover,
-    $bg-color-hover
-  ) {
-    padding: $padding;
-    background-color: $bg-color;
-    border: $border;
-    color: $color;
-    transition: all 0.5s;
-    border-radius: 0px;
-    cursor: pointer;
-  
-    &:hover {
-      color: $color-hover;
-      border: $border-hover;
-      background-color: $bg-color-hover;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+header {
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $color-header;
+    .content {
+      line-height: 2;
+      transition: all 0.5s;
+      span {
+        margin: 0;
+        @include styleText($fs-1, $fw-thin, $color-black);
+      }
+      a {
+        text-decoration: none;
+        @include styleText($fs-1, $fw-thin, $color-black);
+      }
+      &:hover {
+        color: $color-cooler;
+      }
     }
   }
-  
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
+  .navbar {
+    .container-fluid {
+      padding-right: 0 !important;
+    }
+    padding: 0;
+    .navbar-brand {
+      padding: 0;
+      img {
+        width: 100%;
+      }
+    }
   }
-  header {
-    .title {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      background-color: $color-header;
-      .content {
-        line-height: 2;
-        transition: all 0.5s;
-        span {
-          margin: 0;
-          @include styleText($fs-1, $fw-thin, $color-black);
+  .collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .navbar-nav {
+      .nav-link {
+        position: relative;
+        margin-right: 20px;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 3px;
+          bottom: 0px;
+          left: 0;
+          background: $color-red;
+          margin-right: 20px;
+          color: black !important;
+          transition: all 0.5s;
         }
-        a {
-          text-decoration: none;
-          @include styleText($fs-1, $fw-thin, $color-black);
+        &:active {
+          &::after {
+            width: 100%;
+          }
         }
         &:hover {
-          color: $color-cooler;
-        }
-      }
-    }
-    .navbar {
-      .container-fluid {
-        padding-right: 0 !important;
-      }
-      padding: 0;
-      .navbar-brand {
-        padding: 0;
-        img {
-          width: 100%;
-        }
-      }
-    }
-    .collapse {
-      display: flex;
-      justify-content: space-between;
-      .navbar-nav {
-        .nav-link {
-          position: relative;
-          margin-right: 20px;
           &::after {
-            content: "";
+            width: 100%;
+            color: $color-red !important;
+          }
+        }
+      }
+      .active {
+        color: $color-red !important;
+      }
+    }
+    .account_item {
+      a {
+        margin-right: $fs-1;
+        text-decoration: none;
+        @include styleText($fs-1, $fw-medium, $color-black);
+        transition: all 0.5s;
+        &:hover {
+          text-decoration: underline;
+          color: $color-red;
+        }
+      }
+    }
+    .account_search {
+      .navbar-nav {
+        .form-control {
+          border-radius: 0 !important;
+          border: 0;
+          background-color: black;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  background-image: url(./../img2/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: center;
+  padding: 30px 20px 50px;
+  .banner_title {
+    margin-bottom: 15px;
+    a {
+      text-align: left;
+      text-decoration: none;
+      @include styleText($fs-1, $fw-thin, $color-black);
+      transition: all 0.3s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  h1 {
+    @include styleText($fs-4, $fw-semibold, $color-black);
+  }
+}
+
+// part 2 product
+.product {
+  margin: 20px;
+  .product_content {
+    .row {
+      // margin: 10px 0;
+      .product_item {
+        padding: 7px;
+        position: relative;
+
+        .product_img {
+          position: relative;
+          // display: inline-block;
+          .img-top {
+            display: none;
             position: absolute;
-            width: 0%;
-            height: 3px;
-            bottom: 0px;
+            top: 0;
             left: 0;
-            background: $color-red;
-            margin-right: 20px;
-            color: black !important;
-            transition: all 0.5s;
-          }
-          &:active {
-            &::after {
-              width: 100%;
-            }
-          }
-          &:hover {
-            &::after {
-              width: 100%;
-              color: red !important;
-            }
           }
         }
-        .active {
-          color: red !important;
+        &:hover .img-top {
+          display: inline;
         }
-      }
-      .account_item {
-        a {
-          margin-right: $fs-1;
-          text-decoration: none;
-          @include styleText($fs-1, $fw-medium, $color-black);
+        .product_overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
           transition: all 0.5s;
-          &:hover {
-            text-decoration: underline;
-            color: $color-red;
+          .overlay_content {
+            transform: translateY(300px) scale(1.5);
+            transition: all 0.5s;
+            padding-left: 30px;
+            text-align: left;
+            button{
+              border-radius: 0;
+            }
           }
         }
-      }
-      .account_search {
-        .navbar-nav {
-          .form-control {
-            border-radius: 0 !important;
-            border: 0;
-            background-color: black;
-            padding: 15px;
+        &:hover .product_overlay {
+          opacity: 1;
+        }
+        &:hover .overlay_content {
+          transform: translateY(295px);
+        }
+        .item_title {
+          p {
+            @include styleText(13px, $fw-normal, $color-black);
+            margin: 5px 0 5px;
+          }
+          h5 {
+            @include styleText($fs-1, $fw-medium, $color-black);
+          }
+          span {
+            @include styleText($fs-1, $fw-semibold, $color-ten);
+          }
+          .form-check {
+            margin-right: 0;
+            .form-check-label {
+              @include styleText(13px, $fw-medium, $color-black);
+            }
           }
         }
       }
     }
   }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  footer {
-    margin-top: 20px;
-    .footer_top {
-      .col-3 {
-        border: 1px solid #e0e0e0;
-        padding: 35px;
-        text-align: center;
-        h4 {
-          @include styleText($fs-2, $fw-medium, $color-black);
+footer {
+  margin-top: 20px;
+  .footer_top {
+    .top {
+      border: 1px solid #e0e0e0;
+      padding: 35px;
+      text-align: center;
+      h4 {
+        @include styleText($fs-2, $fw-medium, $color-black);
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.5s;
+        color: $color-black;
+        i {
+          margin: 20px 5px;
+          font-size: $fs-2;
         }
-        a {
-          text-decoration: none;
-          transition: all 0.5s;
-          color: $color-black;
-          i {
-            margin: 20px 5px;
-            font-size: $fs-2;
-          }
-          &:hover {
-            color: $color-red;
-          }
-        }
-        p {
-          @include styleText(13px, $fw-thin, $color-black);
+        &:hover {
+          color: $color-red;
         }
       }
+      p {
+        @include styleText(13px, $fw-thin, $color-black);
+      }
     }
-    .footer_middle {
-      margin: 20px 0;
-      .col-3 {
-        // padding: 30px auto;
-        // border: 1px solid #e0e0e0;
-        text-align: left;
-        a {
-          transition: all 0.5s;
-          text-decoration: none;
-          color: $color-black;
-          @include styleText(13px, $fw-normal, $color-black);
+  }
+  .footer_middle {
+    margin: 20px 0;
+    .middle {
+      margin-bottom: 20px;
+      // border: 1px solid #e0e0e0;
+      text-align: left;
+      a {
+        transition: all 0.5s;
+        text-decoration: none;
+        color: $color-black;
+        @include styleText(13px, $fw-normal, $color-black);
+        &:hover {
+          color: $color-red;
+          text-decoration: underline;
+        }
+      }
+      h5 {
+        @include styleText($fs-1, $fw-medium, $color-black);
+      }
+      p {
+        @include styleText(13px, $fw-thin, $color-black);
+      }
+      .content_item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .item {
+          padding: 5px 5px;
+          border: 1px solid #e0e0e0;
+          transition: all 0.6s;
+          text-align: center;
           &:hover {
-            color: $color-red;
-            text-decoration: underline;
-          }
-        }
-        h5 {
-          @include styleText($fs-1, $fw-medium, $color-black);
-        }
-        p {
-          @include styleText(13px, $fw-thin, $color-black);
-        }
-        .content_item {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-  
-          .item {
-            padding: 5px 5px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.6s;
-            text-align: center;
-            &:hover {
-              background-color: $color-black;
-              a {
-                i {
-                  color: $color-white;
-                }
+            background-color: $color-black;
+            a {
+              i {
+                color: $color-white;
               }
             }
           }
         }
       }
-      .input-group {
-        // padding: 10px 5px;
-        .form-control {
-          border-radius: 0;
-        }
-        button {
-          border-radius: 0;
-        }
-      }
     }
-    .footer_bottom {
-      background-color: $color-black;
-      color: $color-footer;
-      .col-6 {
-        .countryside {
-          background-image: url(./../img/logo\ vietnam.png);
-          background-size: contain;
-          background-repeat: no-repeat;
-          padding: 10px;
-        }
-        a {
-          margin-right: 15px;
-          transition: all 0.5s;
-          text-decoration: none;
-          @include styleText(13px, $fw-normal, $color-footer);
-          &:hover {
-            color: $color-white;
-            text-decoration: underline;
-          }
-        }
-        p {
-          margin-bottom: 0;
-          @include styleText(13px, $fw-normal, $color-footer);
-        }
+    .input-group {
+      // padding: 10px 5px;
+      .form-control {
+        border-radius: 0;
+      }
+      button {
+        border-radius: 0;
+        padding: 0 20px;
       }
     }
   }
-  
+  .footer_bottom {
+    background-color: $color-black;
+    color: $color-footer;
+    .col-6 {
+      .countryside {
+        background-image: url(./../img/logo\ vietnam.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 10px;
+      }
+      a {
+        margin-right: 15px;
+        transition: all 0.5s;
+        text-decoration: none;
+        @include styleText(13px, $fw-normal, $color-footer);
+        &:hover {
+          color: $color-white;
+          text-decoration: underline;
+        }
+      }
+      p {
+        margin-bottom: 0;
+        @include styleText(13px, $fw-normal, $color-footer);
+      }
+    }
+  }
+}

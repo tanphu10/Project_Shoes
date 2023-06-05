@@ -54,6 +54,7 @@ header .navbar .navbar-brand img {
 header .collapse {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 header .collapse .navbar-nav .nav-link {
   position: relative;
@@ -76,10 +77,10 @@ header .collapse .navbar-nav .nav-link:active::after {
 }
 header .collapse .navbar-nav .nav-link:hover::after {
   width: 100%;
-  color: red !important;
+  color: rgb(177, 17, 17) !important;
 }
 header .collapse .navbar-nav .active {
-  color: red !important;
+  color: rgb(177, 17, 17) !important;
 }
 header .collapse .account_item a {
   margin-right: 16px;
@@ -106,7 +107,7 @@ header .collapse .account_search .navbar-nav .form-control {
   background-repeat: no-repeat;
   padding: 50px 0 50px;
 }
-.banner a {
+.banner .banner_sale a {
   text-decoration: none;
   font-size: 60px;
   font-weight: 600;
@@ -125,7 +126,7 @@ header .collapse .account_search .navbar-nav .form-control {
   display: inline;
   margin: 20px 0;
 }
-.banner .banner_btn .banner_btn1 button {
+.banner .banner_btn .banner_btn1 a button {
   padding: 10px 50px;
   background-color: #ffffff;
   border: 1px solid black;
@@ -135,7 +136,7 @@ header .collapse .account_search .navbar-nav .form-control {
   cursor: pointer;
   margin-right: 10px;
 }
-.banner .banner_btn .banner_btn1 button:hover {
+.banner .banner_btn .banner_btn1 a button:hover {
   color: #ffffff;
   border: 1px solid black;
   background-color: black;
@@ -143,7 +144,7 @@ header .collapse .account_search .navbar-nav .form-control {
 .banner .banner_btn .banner_btn2 {
   display: inline;
 }
-.banner .banner_btn .banner_btn2 button {
+.banner .banner_btn .banner_btn2 a button {
   padding: 10px 50px;
   background-color: #ffffff;
   border: 1px solid black;
@@ -153,7 +154,7 @@ header .collapse .account_search .navbar-nav .form-control {
   cursor: pointer;
   margin-right: 10px;
 }
-.banner .banner_btn .banner_btn2 button:hover {
+.banner .banner_btn .banner_btn2 a button:hover {
   color: #ffffff;
   border: 1px solid black;
   background-color: black;
