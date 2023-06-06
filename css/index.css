@@ -14,6 +14,9 @@ img {
   margin: 0 auto;
 }
 
+header {
+  /*! ===== Neo header ===== */
+}
 header .title {
   display: flex;
   flex-direction: row;
@@ -38,6 +41,16 @@ header .title .content a {
 }
 header .title .content:hover {
   color: #d8c6b4;
+}
+header .fixed-top {
+  transition: all 0.4s ease 0s;
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  left: 0;
+  top: 30px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
 }
 header .navbar {
   padding: 0;
@@ -102,11 +115,22 @@ header .collapse .account_search .navbar-nav .form-control {
   padding: 15px;
 }
 
+header .nav-fixed {
+  top: 0;
+  padding: 0px;
+  background-color: #fff;
+  height: 55px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+  z-index: 999 !important;
+}
+
 .banner {
   background-image: url("./../img/Banner1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px 0 50px;
+  margin-top: 50px;
 }
 .banner .banner_sale a {
   text-decoration: none;

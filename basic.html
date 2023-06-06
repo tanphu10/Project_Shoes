@@ -31,8 +31,9 @@
 
 <body style="overflow-x:hidden">
     <!-- part 1 -->
+    
     <header>
-        <nav class="title ">
+        <section class="title ">
             <div class="countryside">
                 <a href=""> <img src="./img/logo vietnam.png" alt=""></a>
             </div>
@@ -41,8 +42,8 @@
                     <a href="./basic.html">Shop Now</a>
                 </span>
             </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        </section>
+        <nav id="site-header" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand " href="#">
                     <img src="./img/iconlogo.png" alt="">
@@ -747,125 +748,129 @@
             </div>
         </div>
     </footer>
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <header class="head-form mb-0">
-                <h2 id="header-title" class="py-2 ps-4"
-                    style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    Sign up</h2>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content " style=" border-radius:0">
+                <header class="head-form mb-0">
+                    <h2 id="header-title" class="py-2 ps-4"
+                        style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Sign up</h2>
 
-                <h3 id="header-title" class="py-1 ps-4"
-                    style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    Almost there.</h3>
+                    <h3 id="header-title" class="py-1 ps-4"
+                        style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        Almost there.</h3>
 
-            </header>
-            <!-- Modal Header -->
-            <!-- 	<div class="modal-header">
+                </header>
+                <!-- Modal Header -->
+                <!-- 	<div class="modal-header">
                 <h4 class="modal-title" id="modal-title">Modal Heading</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div> -->
 
-            <!-- Modal body -->
-            <div class="modal-body">
+                <!-- Modal body -->
+                <div class="modal-body">
 
-                <form role="form">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="email" name="email" id="email" class="form-control input-sm"
+                                    placeholder="Email">
                             </div>
-                            <input type="email" name="email" id="email" class="form-control input-sm"
-                                placeholder="Email">
-                        </div>
 
-                        <span class="sp-info" id="notifyEmail"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-address-book"></i></span>
-                            </div>
-                            <input type="name" name="name" id="name" class="form-control input-sm"
-                                placeholder="Name">
-                        </div>
-                        <span class="sp-info" id="notifyName"></span>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                            </div>
-                            <input type="text" name="ngaylam" id="datepicker" class="form-control"
-                                placeholder="Date of Birth (DD/MM/YYYY)">
-                        </div>
-                        <span class="sp-info" id="notifyDateOfBirth"></span>
-                    </div>
-                    <!-- GENDER  -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
-                            </div>
-                            <select class="form-control" id="chucvu">
-                                <option value="">Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Do not specify">Do not specify</option>
-                            </select>
+                            <span class="sp-info" id="notifyEmail"></span>
                         </div>
 
-                        <span class="sp-info" id="notifyGender"></span>
-                    </div>
-                    <!-- PASSWORD  -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                                </div>
+                                <input type="name" name="name" id="name" class="form-control input-sm"
+                                    placeholder="Name">
                             </div>
-                            <input type="password" name="password" id="password" class="form-control input-sm"
-                                placeholder="Password">
+                            <span class="sp-info" id="notifyName"></span>
                         </div>
-                        <div class="screen">
-                            <p class=" font-italic" style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters minimum
-                                <br>One number
-                                <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
-                                <br>One lowercase character
-                                <br>One uppercase character
-                            </p>
-                        </div>
-                        <span class="sp-info"    id="notifyPassWord"></span>
-                    </div>
-                    <!-- CONFIRM PASSWORD  -->
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <input type="text" name="ngaylam" id="datepicker" class="form-control"
+                                    placeholder="Date of Birth (DD/MM/YYYY)">
                             </div>
-                            <input type="password" name="password" id="password" class="form-control input-sm"
-                                placeholder="Confirm password">
+                            <span class="sp-info" id="notifyDateOfBirth"></span>
                         </div>
-                        <span class="sp-info" id="notifyConfirm"></span>
-                    </div>
+                        <!-- GENDER  -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
+                                </div>
+                                <select class="form-control" id="chucvu">
+                                    <option value="">Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Do not specify">Do not specify</option>
+                                </select>
+                            </div>
+
+                            <span class="sp-info" id="notifyGender"></span>
+                        </div>
+                        <!-- PASSWORD  -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" id="password" class="form-control input-sm"
+                                    placeholder="Password">
+                            </div>
+                            <div class="screen">
+                                <p class=" font-italic"
+                                    style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters
+                                    minimum
+                                    <br>One number
+                                    <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
+                                    <br>One lowercase character
+                                    <br>One uppercase character
+                                </p>
+                            </div>
+                            <span class="sp-info" id="notifyPassWord"></span>
+                        </div>
+                        <!-- CONFIRM PASSWORD  -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" id="password" class="form-control input-sm"
+                                    placeholder="Confirm password">
+                            </div>
+                            <span class="sp-info" id="notifyConfirm"></span>
+                        </div>
 
 
-                </form>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer align-items-center text-center" id="modal-footer">
-                <button id="btnAddMember" type="button" class="btn btn-outline-dark" style="border-radius: 0; padding: 5px 40px;">Sign Up</button>
-                <!-- <button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button> -->
-                <button id="btnClose" type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer align-items-center text-center" id="modal-footer">
+                    <button id="btnAddMember" type="button" class="btn btn-outline-dark"
+                        style="border-radius: 0; padding: 5px 40px;">Sign Up</button>
+                    <!-- <button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button> -->
+                    <button id="btnClose" type="button" class="btn btn-outline-danger"
+                        data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/helper.js"></script>
-<script src="./js/model.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/model.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -874,6 +879,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 30) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+    </script>  
 </body>
 
 </html>

@@ -17,7 +17,7 @@ $color-lowpink: #f0f0f0;
 $color-cooler: #d8c6b4;
 $color-header: #f4f4f4;
 $color-footer: rgb(255 255 255 / 50%);
-
+$color-ten: #00c3d7;
 // font-weight
 $fw-thin: 300;
 $fw-normal: 400;
@@ -69,8 +69,10 @@ $spacer: 1rem;
   max-width: 1140px;
   margin: 0 auto;
 }
+
 header {
   .title {
+    // position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -90,6 +92,17 @@ header {
         color: $color-cooler;
       }
     }
+  }
+  /*! ===== Neo header ===== */
+  .fixed-top {
+    transition: all 0.4s ease 0s;
+    position: fixed;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+    top: 30px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
   }
   .navbar {
     .container-fluid {
@@ -164,6 +177,20 @@ header {
     }
   }
 }
+// /*! ===== Neo header ===== */
+
+header{
+  .nav-fixed {
+    // position: absolute;
+    top: 0;
+    padding: 0px;
+    background-color: #fff;
+    height: 55px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    border-bottom: none;
+    z-index: 999 !important;
+  }
+}
 
 // phần banner
 .banner {
@@ -171,6 +198,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 50px 0 50px;
+  margin-top: 50px;
   // background-position: center bottom;
   .banner_sale {
     a {
