@@ -141,6 +141,7 @@ header {
     }
     .account_item {
       a {
+        padding-top: 8px;
         margin-right: $fs-1;
         text-decoration: none;
         @include styleText($fs-1, $fw-medium, $color-black);

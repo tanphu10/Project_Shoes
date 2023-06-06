@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/basic.css">
     <!-- fancybox  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -36,14 +38,13 @@
             </div>
             <div class="content">
                 <span>EXTRA 40% OFF |USE CODE: EXTRA 40|
-                    <a href="#">Shop Now</a>
-
+                    <a href="./basic.html">Shop Now</a>
                 </span>
             </div>
         </nav>
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid">
-                <a class="navbar-brand " href="./index.html">
+                <a class="navbar-brand " href="#">
                     <img src="./img/iconlogo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -51,18 +52,21 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">sales</a>
-                        <a class="nav-link" href="#">Men</a>
-                        <a class="nav-link" href="#">Women</a>
-                        <a class="nav-link" href="#">Kids</a>
-                        <a class="nav-link" href="#">LimitEditons</a>
-                        <a class="nav-link" href="#">Explore</a>
+                        <a class="nav-link active" aria-current="page" href="./basic.html">sales</a>
+                        <a class="nav-link" href="./basic.html">Men</a>
+                        <a class="nav-link" href="./basic.html">Women</a>
+                        <a class="nav-link" href="./basic.html">Kids</a>
+                        <a class="nav-link" href="./basic.html">LimitEditons</a>
+                        <a class="nav-link" href="./basic.html">Explore</a>
                     </div>
                     <div class="account_item d-flex">
-                        <a href="#">Register account</a>
-                        <a href="#"><i class="fa-solid fa-user-large"></i></a>
+                        <a href="#" class="me-3" id="btnAdd" data-toggle="modal" data-target="#myModal">Register
+                            account</a>
+                        <a href="#" class="me-3" id="btnAdd" data-toggle="modal" data-target="#myModal"><i
+                                class="fa-solid fa-user-large"></i></a>
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></i></a>
 
                     </div>
@@ -98,29 +102,6 @@
             <h1>Extra 40% Off</h1>
         </div>
     </section>
-    <!-- <section class="taskbar">
-        <div class="container">
-            <div class="item-1">100</div>
-            <div class="item-2">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-briefcase"></i></span>
-                        </div>
-                        <select class="form-control" id="chucvu">
-                            <option selected>Best seller</option>
-                            <option value="">Price:Low-Hight</option>
-                            <option value="">Price:Hight-low</option>
-                            <option value="">New arrived</option>
-                        </select>
-                    </div>
-
-                    <span class="sp-thongbao" id="tbChucVu"></span>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="product">
         <div class="container-fluid">
             <div class="product_content">
@@ -325,6 +306,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="product_item col-xl-3 col-md-4 col-sm-6">
                         <div class="product_img">
                             <img src="./img2/hinh 2.4.jpg" alt="">
@@ -437,6 +419,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- </div>
+                <div class="row"> -->
                     <div class="product_item col-xl-3 col-md-4 col-sm-6">
                         <div class="product_img">
                             <img src="./img2/hinh 3.0.jpg" alt="">
@@ -549,6 +533,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- </div>
+                <div class="row"> -->
                     <div class="product_item col-xl-3 col-md-4 col-sm-6">
                         <div class="product_img">
                             <img src="./img2/hinh 3.8.jpg" alt="">
@@ -761,7 +747,125 @@
             </div>
         </div>
     </footer>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <header class="head-form mb-0">
+                <h2 id="header-title" class="py-2 ps-4"
+                    style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Sign up</h2>
 
+                <h3 id="header-title" class="py-1 ps-4"
+                    style="font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Almost there.</h3>
+
+            </header>
+            <!-- Modal Header -->
+            <!-- 	<div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div> -->
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <form role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" id="email" class="form-control input-sm"
+                                placeholder="Email">
+                        </div>
+
+                        <span class="sp-info" id="notifyEmail"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-address-book"></i></span>
+                            </div>
+                            <input type="name" name="name" id="name" class="form-control input-sm"
+                                placeholder="Name">
+                        </div>
+                        <span class="sp-info" id="notifyName"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <input type="text" name="ngaylam" id="datepicker" class="form-control"
+                                placeholder="Date of Birth (DD/MM/YYYY)">
+                        </div>
+                        <span class="sp-info" id="notifyDateOfBirth"></span>
+                    </div>
+                    <!-- GENDER  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa-solid fa-transgender"></i></span>
+                            </div>
+                            <select class="form-control" id="chucvu">
+                                <option value="">Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Do not specify">Do not specify</option>
+                            </select>
+                        </div>
+
+                        <span class="sp-info" id="notifyGender"></span>
+                    </div>
+                    <!-- PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control input-sm"
+                                placeholder="Password">
+                        </div>
+                        <div class="screen">
+                            <p class=" font-italic" style="font-size: 12px; font-weight: 200; padding:10px 0 10px 20px ;">8 characters minimum
+                                <br>One number
+                                <br>At least 1 special character(s) - [$%/(){}=?!.,-_*+~#]
+                                <br>One lowercase character
+                                <br>One uppercase character
+                            </p>
+                        </div>
+                        <span class="sp-info"    id="notifyPassWord"></span>
+                    </div>
+                    <!-- CONFIRM PASSWORD  -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control input-sm"
+                                placeholder="Confirm password">
+                        </div>
+                        <span class="sp-info" id="notifyConfirm"></span>
+                    </div>
+
+
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer align-items-center text-center" id="modal-footer">
+                <button id="btnAddMember" type="button" class="btn btn-outline-dark" style="border-radius: 0; padding: 5px 40px;">Sign Up</button>
+                <!-- <button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button> -->
+                <button id="btnClose" type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/helper.js"></script>
+<script src="./js/model.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
