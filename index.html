@@ -37,7 +37,7 @@
                 <a href=""> <img src="./img/logo vietnam.png" alt=""></a>
             </div>
             <div class="content">
-                <span>EXTRA 40% OFF |USE CODE: EXTRA 40|
+                <span>CONVERSE VIET NAM|
                     <a href="./basic.html">Shop Now</a>
                 </span>
             </div>
@@ -54,7 +54,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav " style="padding-top: 8px;">
                         <a class="nav-link active" aria-current="page" href="./basic.html">sales</a>
                         <a class="nav-link" href="./basic.html">Men</a>
                         <a class="nav-link" href="./basic.html">Women</a>
@@ -63,7 +63,7 @@
                         <a class="nav-link" href="./basic.html">Explore</a>
                     </div>
                     <div class="account_item d-flex">
-                        <a href="#" class="me-3" id="btnAdd" data-toggle="modal" data-target="#myModal">Register
+                        <a href="#" class="me-3" id="btnAdd" data-toggle="modal" data-target="#myModal">My
                             account</a>
                         <a href="#" class="me-3" id="btnAdd" data-toggle="modal" data-target="#myModal"><i
                                 class="fa-solid fa-user-large"></i></a>
@@ -92,6 +92,7 @@
             </div>
         </nav>
     </header>
+
     <!-- part 2 -->
     <section class="banner">
         <div class="container-fluid">
@@ -340,7 +341,7 @@
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
-            <div class="modal-content" style=" border-radius:0">
+            <div class="modal-content " style=" border-radius:0">
                 <header class="head-form mb-0">
                     <h2 id="header-title" class="py-2 ps-4"
                         style="font-size:larger ; text-decoration: underline;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
@@ -353,14 +354,27 @@
                 </header>
                 <!-- Modal Header -->
                 <!-- 	<div class="modal-header">
-					<h4 class="modal-title" id="modal-title">Modal Heading</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div> -->
+            <h4 class="modal-title" id="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> -->
 
                 <!-- Modal body -->
                 <div class="modal-body">
-
                     <form role="form">
+                        <!-- number user -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i
+                                            class="fa-solid fa-person-circle-check"></i></span>
+                                </div>
+                                <input type="number user" name="number user" id="numberUser"
+                                    class="form-control input-sm" placeholder="Number user">
+                            </div>
+
+                            <span class="sp-info" id="notifyUser"></span>
+                        </div>
+                        <!-- email -->
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -372,7 +386,7 @@
 
                             <span class="sp-info" id="notifyEmail"></span>
                         </div>
-
+                        <!-- name -->
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -383,12 +397,24 @@
                             </div>
                             <span class="sp-info" id="notifyName"></span>
                         </div>
+                        <!-- number phone -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <input type="phone" name="phone" id="phone" class="form-control input-sm"
+                                    placeholder="Number phone">
+                            </div>
+                            <span class="sp-info" id="notifyNumberPhone"></span>
+                        </div>
+                        <!-- date of birth -->
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                 </div>
-                                <input type="text" name="ngaylam" id="datepicker" class="form-control"
+                                <input type="text" name="" id="datepicker" class="form-control"
                                     placeholder="Date of Birth (DD/MM/YYYY)">
                             </div>
                             <span class="sp-info" id="notifyDateOfBirth"></span>
@@ -449,7 +475,7 @@
                 <div class="modal-footer align-items-center text-center" id="modal-footer">
                     <button id="btnAddMember" type="button" class="btn btn-outline-dark"
                         style="border-radius: 0; padding: 5px 40px;">Sign Up</button>
-                    <!-- <button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button> -->
+                    <a href="./register.html"><button id="btnList" type="button" class="btn btn-outline-success">List sign up</button></a>
                     <button id="btnClose" type="button" class="btn btn-outline-danger"
                         data-dismiss="modal">Close</button>
                 </div>
