@@ -459,17 +459,12 @@ header{
                 align-items: flex-end;
                 margin-bottom: 1.5rem;
 
-                .rate_star {
-                    i {
-                        font-size: $fs-1;
-                    }
-                }
                 a {
-                    @include styleText($fs-2, $fw-normal, $color-secondary);
-                    margin-left: 10px;
-                    text-decoration: underline;
-                }
+                  margin-left: 0;
+                  @include styleText($fs-1, $fw-normal, $color-primary);
+                  }
             }
+
 
             .product_desc {
                 position: relative;
@@ -477,6 +472,10 @@ header{
                 a {
                     @include styleText($fs-2, $fw-normal, $color-primary);
                     text-decoration: underline;
+
+                    &:hover {
+                      color: $color-secondary;
+                    }
                 }
 
                 &::after {
@@ -568,6 +567,7 @@ header{
 
                     &:hover {
                       transform: scale(1.25);
+                      cursor: pointer;
                     }
                 }
                 }
