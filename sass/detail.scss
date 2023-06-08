@@ -107,140 +107,138 @@ $rec-item-gap: 80px;
     }
   }
 
-header {
-  .title {
-    // position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: $color-header;
-    .content {
-      line-height: 2;
-      transition: all 0.5s;
-      span {
-        margin: 0;
-        @include styleText($fs-1, $fw-thin, $color-black);
-      }
-      a {
-        text-decoration: none;
-        @include styleText($fs-1, $fw-thin, $color-black);
-      }
-      &:hover {
-        color: $color-cooler;
-      }
-    }
-  }
-  /*! ===== Neo header ===== */
-  .fixed-top {
-    transition: all 0.4s ease 0s;
-    position: fixed;
-    z-index: 1030;
-    right: 0;
-    left: 0;
-    top: 30px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-  }
-  .navbar {
-    .container-fluid {
-      padding-right: 0 !important;
-    }
-    padding: 0;
-    .navbar-brand {
-      padding: 0;
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .collapse {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; //edit
-    .navbar-nav {
-      .nav-link {
-        position: relative;
-        margin-right: 20px;
-        &::after {
-          content: "";
-          position: absolute;
-          width: 0%;
-          height: 3px;
-          bottom: 0px;
-          left: 0;
-          background: $color-red;
-          margin-right: 20px;
-          color: black !important;
-          transition: all 0.5s;
-        }
-        &:active {
-          &::after {
-            width: 100%;
-          }
-        }
-        &:hover {
-          &::after {
-            width: 100%;
-            color: $color-red !important;
-          }
-        }
-      }
-      .active {
-        color: $color-red !important;
-      }
-    }
-    .account_item {
-      // Edit
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      a {
-        // padding-top: 8px;
-        margin-right: $fs-1;
-        margin-bottom: 0;
-        text-decoration: none;
-        @include styleText($fs-1, $fw-medium, $color-black);
-        transition: all 0.5s;
-        &:hover {
-          text-decoration: underline;
-          color: $color-red;
-        }
-      }
-    }
-    .account_search {
+/* header {
+    .title {
       position: relative;
-      .navbar-nav {
-        .form-control {
-          border-radius: 0 !important;
-          border: 0;
-          background-color: black;
-          padding: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: $color-header;
+      .content {
+        line-height: 2;
+        transition: all 0.5s;
+        span {
+          margin: 0;
+          @include styleText($fs-1, $fw-thin, $color-black);
         }
-
-        .search-btn {
-          position: absolute;
-          top: 13px;
-          right: 0; 
-          color: $color-white; 
+        a {
+          text-decoration: none;
+          @include styleText($fs-1, $fw-thin, $color-black);
+        }
+        &:hover {
+          color: $color-cooler;
+        }
       }
     }
+    .fixed-top {
+      transition: all 0.4s ease 0s;
+      position: fixed;
+      z-index: 1030;
+      right: 0;
+      left: 0;
+      top: 30px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+    }
+    .navbar {
+      .container-fluid {
+        padding-right: 0 !important;
+      }
+      padding: 0;
+      .navbar-brand {
+        padding: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .collapse {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; //edit
+      .navbar-nav {
+        .nav-link {
+          position: relative;
+          margin-right: 20px;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom: 0px;
+            left: 0;
+            background: $color-red;
+            margin-right: 20px;
+            color: black !important;
+            transition: all 0.5s;
+          }
+          &:active {
+            &::after {
+              width: 100%;
+            }
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+              color: $color-red !important;
+            }
+          }
+        }
+        .active {
+          color: $color-red !important;
+        }
+      }
+      .account_item {
+        // Edit
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          // padding-top: 8px;
+          margin-right: $fs-1;
+          margin-bottom: 0;
+          text-decoration: none;
+          @include styleText($fs-1, $fw-medium, $color-black);
+          transition: all 0.5s;
+          &:hover {
+            text-decoration: underline;
+            color: $color-red;
+          }
+        }
+      }
+      .account_search {
+        position: relative;
+        .navbar-nav {
+          .form-control {
+            border-radius: 0 !important;
+            border: 0;
+            background-color: black;
+            padding: 15px;
+          }
+  
+          .search-btn {
+            position: absolute;
+            top: 13px;
+            right: 0; 
+            color: $color-white; 
+        }
+      }
+      }
     }
   }
-}
-// /*! ===== Neo header ===== */
-
-header{
-  .nav-fixed {
-    // position: absolute;
-    top: 0;
-    padding: 0px;
-    background-color: #fff;
-    height: $header-height;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-    border-bottom: none;
-    z-index: 999 !important;
-  }
-}
+  
+  header {
+    .nav-fixed {
+      // position: absolute;
+      top: 0;
+      padding: 0px;
+      background-color: #fff;
+      height: $header-height;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+      border-bottom: none;
+      z-index: 999 !important;
+    }
+  } */
 
 .detail {
     margin: $header-height 40px 0;
